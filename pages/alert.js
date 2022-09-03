@@ -1,8 +1,10 @@
 import styles from './alert.module.css';
 import cn from 'classnames';
+import Layout from '../components/layout';
 
 export default function Alert({ children, type }) {
   return (
+    <Layout>
     <div
       className={cn({
         [styles.success]: type === 'success',
@@ -11,5 +13,6 @@ export default function Alert({ children, type }) {
     >
       {children}
     </div>
+    </Layout>
   );
 }
